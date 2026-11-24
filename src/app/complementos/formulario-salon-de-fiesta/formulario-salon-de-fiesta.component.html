@@ -1,0 +1,50 @@
+<div class="capa-carga" *ngIf="cargando">
+  <div class="spinner-carga"></div>
+  <p>Enviando mensaje...</p>
+</div>
+
+<div class="contenedor-formulario">
+  <h1>Generar cita 🚀</h1>
+
+  <form (ngSubmit)="enviarCita(citaForm)" #citaForm="ngForm" aria-labelledby="form-title">
+      <div class="fila-formulario">
+          <div class="grupo-formulario">
+              <label for="nombre">Nombre Completo:</label>
+              <input type="text" id="nombre" name="nombre" ngModel required aria-required="true">
+          </div>
+      </div>
+
+      <div class="fila-formulario">
+          <div class="grupo-formulario">
+              <label for="telefono">Teléfono de contacto (sin espacios):</label>
+              <input type="tel" id="telefono" name="telefono" ngModel required maxlength="10" aria-required="true">
+          </div>
+      </div>
+
+      <div class="fila-formulario">
+          <div class="grupo-formulario">
+              <label for="confirmarTelefono">Confirmar Teléfono:</label>
+              <input type="tel" id="confirmarTelefono" name="confirmarTelefono" ngModel required maxlength="10" aria-required="true">
+          </div>
+      </div>
+
+      <div class="fila-formulario doble">
+          <div class="grupo-formulario">
+              <label for="fecha">Fecha:</label>
+              <input type="date" id="fecha" name="fecha" ngModel required aria-required="true">
+          </div>
+
+          <div class="grupo-formulario">
+              <label for="hora">Hora:</label>
+              <input type="time" id="hora" name="hora" ngModel required aria-required="true">
+          </div>
+      </div>
+
+      <div class="fila-formulario">
+          <button type="submit" class="boton-confirmar" aria-label="Confirmar cita">
+              <i class="fab fa-whatsapp"></i>
+              Confirmar Cita
+          </button>
+      </div>
+  </form>
+</div>

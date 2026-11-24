@@ -1,0 +1,21 @@
+<h1 class="titulo">Cursosos de Verano</h1>
+
+   
+<img class="galactic-image" src="img/cursoverano/06.jpg" alt="Imagen" />
+<div class="titulo">Galería</div>
+
+
+<div class="gallery-container">
+    <div class="gallery-item" *ngFor="let image of images">
+      <img [src]="image.src" [alt]="image.alt" (click)="openImage(image)" />
+    </div>
+  </div>
+  
+ 
+  <div class="modal" *ngIf="selectedImage">
+    <span class="close" (click)="closeImage()">&times;</span>
+    <img [src]="selectedImage.src" [alt]="selectedImage.alt" />
+    <p>{{ selectedImage.alt }}</p>
+  </div>
+  
+  <app-boton-whatsapp></app-boton-whatsapp>

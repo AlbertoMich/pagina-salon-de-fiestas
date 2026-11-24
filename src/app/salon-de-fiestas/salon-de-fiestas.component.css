@@ -1,0 +1,243 @@
+.titulo {
+    font-size: 2.5em;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 
+        1px 1px 0 #ff0000,
+        -1px -1px 0 #00ff00,
+        1px -1px 0 #0000ff,
+        -1px 1px 0 #ff00ff,
+        0 0 5px #ff00ff,
+        0 0 10px #ff00ff;
+    text-align: center;
+    margin: 40px 0;
+    position: relative; 
+    z-index: 10; 
+}
+
+.titulo i {
+    color: #ff0000; 
+    margin-right: 10px; 
+    font-size: 1.5em; 
+}
+
+.titulo-como-llegar {
+    font-size: 2em;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 
+        0 0 5px #00ffcc,
+        0 0 10px #00ccff,
+        0 0 15px #ff00cc;
+    text-align: center;
+    margin: 30px 0;
+    position: relative; 
+    z-index: 10;
+}
+
+.titulo-como-llegar i {
+    color: #2600ff;
+    margin-left: 10px;
+    font-size: 1.5em;
+}
+
+.imagen-decorativa {
+    display: block;
+    margin: 20px auto; 
+    max-width: 80%; 
+    height: auto; 
+    border-radius: 15px; 
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.5); 
+}
+
+iframe {
+    width: 60%; 
+    height: 340px;
+    border: 0;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+    transition: transform 0.3s ease;
+   
+    display: block;
+    margin: 20px auto
+}
+
+iframe:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+    .titulo {
+        font-size: 2em; 
+    }
+    .titulo-como-llegar {
+        font-size: 1.75em; 
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 1.75em;
+    }
+    .titulo-como-llegar {
+        font-size: 1.5em; 
+    }
+    
+    iframe {
+        width: 90%; 
+        height: 250px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 1.5em;
+        line-height: 1.2;
+    }
+    .titulo-como-llegar {
+        font-size: 1.25em; 
+    }
+    
+    .imagen-decorativa, .imagen-paquete {
+        max-width: 70%;
+    }
+
+    .container {
+        padding: 0 3%; 
+    }
+}
+
+.paquetes {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.paquete {
+    margin: 20px;
+    display: inline-block;
+    width: 80%; 
+    max-width: 350px; 
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+    transition: transform 0.3s ease;
+    position: relative; 
+    z-index: 1; 
+}
+
+.paquete:hover {
+    transform: scale(1.05);
+}
+
+.nombre-paquete {
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.imagen-paquete {
+    width: 100%;
+    height: auto; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+    transition: transform 0.3s ease; 
+    position: relative; 
+    z-index: 1; 
+}
+
+.imagen-paquete:hover {
+    transform: scale(1.1); 
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 50, 0.95); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: glow 2s infinite alternate;
+}
+
+.contenido-modal {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 450px;
+}
+
+.cerrar {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+.container {
+    padding: 0 5%; 
+}
+
+
+.contenedor-formulario-mapa {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    margin-top: 5px; 
+}
+
+
+
+.direccion {
+    font-size: 0.75em; 
+    color: #fff;
+    text-align: center;
+    margin-top: 15px; 
+    padding: 8px 15px; 
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px; 
+    display: inline-block; 
+    max-width: 90%; 
+    word-wrap: break-word;
+    line-height: 1.4; 
+}
+
+.direccion a {
+    color: #fff; 
+    text-decoration: none;
+    font-weight: normal; 
+}
+
+.direccion a:hover {
+    text-decoration: underline; 
+    color: #00ccff; 
+}
+
+
+video {
+    display: block;
+    margin: 20px auto;
+    width: 70%; 
+    max-width: 800px; 
+    border: 3px solid #0ab1ff; 
+    border-radius: 10px;  
+    box-shadow: none;  
+    background-color: transparent;  
+  }
+
+  .modal img {
+    max-width: 70%;
+    max-height: 150%;
+    border-radius: 8px;
+    border: 4px solid #00d4ff; 
+    box-shadow: 0 0 30px #6e00ff, 0 0 60px #ff00ff;
+  }

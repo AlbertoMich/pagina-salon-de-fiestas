@@ -1,0 +1,58 @@
+<div class="container mt-4">
+    <h1 class="mb-4">Dashboard de Monitoreo</h1>
+  
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Tiempo de Carga</h5>
+            <p class="card-text">{{ performanceData?.loadTime }} ms</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">FPS</h5>
+            <p class="card-text">{{ performanceData?.fps }}</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Clics Totales</h5>
+            <p class="card-text">{{ performanceData?.clicks }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <h5>home - Clics</h5>
+        <p>{{ performanceData?.sectionClicks?.section1 }} clics</p>
+        <p>Tiempo de permanencia: {{ (performanceData?.timeSpent?.section1 / 1000) | number:'1.0-2' }} segundos</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Sección 2 - Clics</h5>
+        <p>{{ performanceData?.sectionClicks?.section2 }} clics</p>
+        <p>Tiempo de permanencia: {{ (performanceData?.timeSpent?.section2 / 1000) | number:'1.0-2' }} segundos</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Sección 3 - Clics</h5>
+        <p>{{ performanceData?.sectionClicks?.section3 }} clics</p>
+        <p>Tiempo de permanencia: {{ (performanceData?.timeSpent?.section3 / 1000) | number:'1.0-2' }} segundos</p>
+      </div>
+    </div>
+  
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <h5>Estado de la ventana</h5>
+        <p>{{ performanceData?.windowState }}</p>
+      </div>
+    </div>
+  </div>
+  

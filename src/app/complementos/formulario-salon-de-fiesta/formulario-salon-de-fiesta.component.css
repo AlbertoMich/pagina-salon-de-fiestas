@@ -1,0 +1,179 @@
+.contenedor-formulario {
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #1a0033 0%, #331a66 100%);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5), 0 0 60px rgba(255, 0, 255, 0.7);
+    font-family: 'Orbitron', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 5px rgba(0, 255, 255, 0.7);
+}
+
+.fila-formulario {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fila-formulario.doble {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.grupo-formulario {
+    flex: 1;
+    margin: 0 10px;
+    text-align: left;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 0.9em;
+    color: #00ffff;
+}
+
+input {
+    width: 100%;
+    padding: 6px;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+    outline: none;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+    background-color: #333;
+}
+
+.boton-confirmar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: #00ff00;
+    padding: 10px 20px;
+    border: 2px solid #00ff00;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+    max-width: 200px;
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.boton-confirmar i {
+    font-size: 1.2em;
+    margin-right: 5px;
+    color: #00ff00;
+    transition: color 0.3s ease;
+}
+
+.boton-confirmar:hover {
+    background-color: #00ff00;
+    color: #000;
+    box-shadow: 0 0 30px #00ff00, 0 0 60px #00ff00, 0 0 90px #00ff00;
+}
+
+.boton-confirmar:hover i {
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .contenedor-formulario {
+        max-width: 70%;
+        padding: 10px;
+    }
+
+    .fila-formulario.doble {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    input {
+        font-size: 0.85em;
+        padding: 6px;
+    }
+
+    .boton-confirmar {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.4em;
+    }
+
+    input {
+        font-size: 0.8em;
+        padding: 5px;
+    }
+
+    .boton-confirmar {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+}
+
+.capa-carga p {
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-shadow: 0 0 5px #ff8c00, 0 0 10px #ff8c00;
+}
+
+.capa-carga {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner-carga {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #ff8c00;
+    width: 50px;
+    height: 50px;
+    animation: girar 1s linear infinite;
+}
+
+@keyframes girar {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
